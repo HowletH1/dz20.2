@@ -1,8 +1,8 @@
-from dao.director import DirectorDAO
+from dao.director import GenreDAO
 
 
 class DirectorService:
-    def __init__(self, dao: DirectorDAO):
+    def __init__(self, dao: GenreDAO):
         self.dao = dao
 
     def get_one(self, bid):

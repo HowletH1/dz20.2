@@ -1,18 +1,18 @@
-from dao.model.director import Director
+from dao.model.director import Genre
 
 
-class DirectorDAO:
+class GenreDAO:
     def __init__(self, session):
         self.session = session
 
     def get_one(self, bid):
-        return self.session.query(Director).get(bid)
+        return self.session.query(Genre).get(bid)
 
     def get_all(self):
-        return self.session.query(Director).all()
+        return self.session.query(Genre).all()
 
     def create(self, director_d):
-        ent = Director(**director_d)
+        ent = Genre(**director_d)
         self.session.add(ent)
         self.session.commit()
         return ent
